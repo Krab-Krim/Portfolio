@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<!--Header-->
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+
+            <div class="user">
+                <div class="user__avatar">
+                    <img src="images/1.jpg" alt="">
+                </div>
+                <div class="user__content">
+                    <div class="user__name">Петрова<br>Вера</div>
+                    <div class="user__prof">Frontend developer</div>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <a class="nav__link" href="#work">Работы</a>
+                <a class="nav__link" href="#aboutMe">обо мне</a>
+                <a class="nav__link nav__link--btn" href="#" data-modal="#modal_hire_me">найми меня</a>
+            </nav>
+
+            <div class="burger">
+                <img class="burger__icon" src="images/menu.svg" alt="">
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!--Intro-->
+<section class="intro" id="contact">
+    <div class="container">
+        <div class="intro__inner">
+            <div class="intro__content">
+                <h2 class="intro__subtitle">Привет! Я </h2>
+                <h1 class="intro__title">Петрова Вера</h1>
+                <div class="intro__text">Frontend developer</div>
+
+                <div class="social">
+                    <a href="https://www.facebook.com/Petr0vaVera" target="_blank" class="social__link">
+                        <img src="images/FaceBook_512x512.png" alt="" class="social__link--img">
+                    </a>
+                    <a href="https://www.instagram.com/another_makizar/" target="_blank" class="social__link">
+                        <img src="images/instagram.png" alt="" class="social__link--img">
+                    </a>
+                    <a href="https://xn--80affa3aj0al.xn--80asehdb/#/im" target="_blank" class="social__link">
+                        <img src="images/telegram.png" alt="" class="social__link--img">
+                    </a>
+                    <a href="https://vk.com/id45281246" target="_blank" class="social__link">
+                        <img src="images/VK_Blue_Logo_t-170x170.png" alt="" class="social__link--img">
+                    </a>
+                    <a href="https://wa.me/+79788649976" target="_blank" class="social__link">
+                        <img src="images/whatsapp.png" alt="" class="social__link--img">
+                    </a>
+                    <a href="skype:zverak96" target="_blank" class="social__link">
+                        <img src="images/skype_2.png" alt="" class="social__link--img">
+                    </a>
+                </div>
+                <a href="#" class="btn" data-modal="#modal_hire_me">найми меня</a>
+                <button class="btn" type="button" data-modal="#modal_resume">резюме</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Works-->
+<div class="works" id="work">
+    <div class="container">
+
+        <div class="works__nav">
+            <a href="" class="works__nav-link" data-filter="all">Все</a>
+            <a href="" class="works__nav-link" data-filter="website">Web-сайт</a>
+            <a href="" class="works__nav-link" data-filter="app">App</a>
+            <a href="" class="works__nav-link" data-filter="interaction">Новое</a>
+        </div>
+
+        <div class="portfolio" id="portfolio">
+            <div class="portfolio__col" data-cat="website">
+                <div class="work" data-modal="#modal_project_1">
+                    <img src="images/3.png" alt="" class="work__image">
+                    <div class="work__content">
+                        <div class="work__cat">Web-сайт</div>
+                        <div class="work__title">Калькулятор
+                            <time class="work__date" datetime="2021-01-03 19:30">2021</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__col" data-cat="website">
+                <div class="work" data-modal="#modal_project_2">
+                    <img src="images/4.jpg" alt="" class="work__image">
+                    <div class="work__content">
+                        <div class="work__cat">Web-сайт</div>
+                        <div class="work__title">Калькулятор
+                            <time class="work__date" datetime="2021-04-10 9:10">2021</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__col" data-cat="app">
+                <div class="work" data-modal="#modal_project_3">
+                    <img src="http://placehold.it/370x250" alt="" class="work__image">
+                    <div class="work__content">
+                        <div class="work__cat">Категория - app</div>
+                        <div class="work__title">Залоговок
+                            <time class="work__date" datetime="2021-04-10 9:10">Дата</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__col" data-cat="interaction">
+                <div class="work" data-modal="#modal_project_3">
+                    <img src="http://placehold.it/370x250" alt="" class="work__image">
+                    <div class="work__content">
+                        <div class="work__cat">Категория - новое</div>
+                        <div class="work__title">Залоговок
+                            <time class="work__date" datetime="2021-04-10 9:10">Дата</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__col" data-cat="interaction">
+                <div class="work" data-modal="#modal_project_3">
+                    <img src="http://placehold.it/370x250" alt="" class="work__image">
+                    <div class="work__content">
+                        <div class="work__cat">Категория - новое</div>
+                        <div class="work__title">Залоговок
+                            <time class="work__date" datetime="2021-04-10 9:10">Дата</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__col" data-cat="app">
+                <div class="work" data-modal="#modal_project_3">
+                    <img src="http://placehold.it/370x250" alt="" class="work__image">
+                    <div class="work__content">
+                        <div class="work__cat">Категория - app</div>
+                        <div class="work__title">Залоговок
+                            <time class="work__date" datetime="2021-04-10 9:10">Дата</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn--sm" href="#" data-modal="#modal_hire_me">Возникли вопросы</a>
+        </div>
+    </div>
+</div>
+
+<!--About-->
+<section class="about" id="aboutMe">
+    <div class="container">
+        <div class="about__inner">
+            <div class="about__photo">
+                <img src="images/IMG_20210204_100244.jpg" alt="" class="img">
+            </div>
+            <div class="about__content">
+                <h3 class="about__title">Обо мне</h3>
+                <h2 class="about__bigtitle">WHO AM I</h2>
+                <div class="about__text">
+                    <p>
+                        Всем привет! Меня зовут Вера. Мне 24 года. Являюсь начинающим Web-разработчиком. Направление,
+                        в котором хочу развиваться - FRONTEND DEVELOPER.
+                    </p>
+                    <p>
+                        Имею опыт работы с HTML5, CSS3, JavaScript, VueJS, Bootstrap, GitHub, Git, Ajax, препроцессоры
+                        css, адаптивной верстки, создания HTML-страницы сайта
+                        на основе дизайн-макетов. Навыки привязки к пользовательскому интерфейсу скриптов, которые
+                        обеспечивают визуализацию и анимацию страниц сайта.
+                    </p>
+                    <p>
+                        Умение работать в режиме многозадачности и высокие аналитические способности позволяют мне
+                        эффективно работать с большими объёмами информации, быстро находить качественные решения
+                        сложных задач.
+                    </p>
+                    <p class="life-motto">
+                        //life motto
+                        <br>if (sad() === true) {
+                        <br>sad().stop();
+                        <br>beAwesome();
+                        <br>}
+                    </p>
+                </div>
+                <a href="#" class="btn" data-modal="#modal_hire_me">найми меня</a>
+                <button class="btn" data-modal="#modal_resume">резюме</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__credits">
+                <div class="footer__copyright">
+                    &copy 2021 - Petrova Vera
+                </div>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/Petr0vaVera" target="_blank">
+                        <img src="images/facebook.png" width="24" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/another_makizar/" target="_blank">
+                        <img src="images/instagram%20(1).png" width="24" alt="">
+                    </a>
+                    <a href="https://xn--80affa3aj0al.xn--80asehdb/#/im" target="_blank">
+                        <img src="images/telegram%20(1).png" width="24" alt="">
+                    </a>
+                    <a href="https://vk.com/id45281246" target="_blank">
+                        <img src="images/vk.png" width="24" alt="">
+                    </a>
+                    <a href="https://wa.me/+79788649976" target="_blank">
+                        <img src="images/whatsapp%20(1).png" width="24" alt="">
+                    </a>
+                    <a href="skype:zverak96" target="_blank">
+                        <img src="images/skype.png" width="24" alt="">
+                    </a>
+                </div>
+            </div>
+            <nav class="footer__nav">
+                <a href="#work" class="footer__nav-link" >Работы</a>
+                <a href="#aboutMe" class="footer__nav-link">Обо мне</a>
+<!--                <a href="#blog" class="footer__nav-link">Блог</a>-->
+<!--                <a href="#contact" class="footer__nav-link">Контакты</a>-->
+                <a href="" class="footer__nav-link footer__nav-link--btn" data-modal="#modal_hire_me">Найми меня</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+<!--Modal-1-->
+<div class="modal" id="modal_project_1">
+    <div class="modal__dialog">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="images/1200px-High-contrast-dialog-close.svg.png" alt="Close">
+        </button>
+
+        <div class="modal-work">
+            <div class="modal-work__preview">
+                <div data-slider="slick">
+                <div>
+                    <img class="modal-work__photo" src="images/3%20(2).png" alt="">
+                </div>
+                    <div>
+                    <img class="modal-work__photo" src="images/3%20(3).png" alt="">
+                </div>
+            </div>
+            </div>
+            <div class="modal-work__content">
+
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">Калькулятор на чистом JS</h3>
+                    <div class="modal-work__info">
+                        Web-сайт <span class="modal-work__info-divider">|</span> 2021
+                    </div>
+                </div>
+
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Свой собственный проект </div>
+                </div>
+
+                <div class="modal-work__text">
+                    <p>Проект создан для расчета стоимости дома. В данный калькулятор входит измерение площади дома,
+                        выбор типа постройки, количества комнат и широкий профиль дополнительных услуг.
+                        При большом количестве запросов калькулятор быстро рассчитывает итоговую стоимость</p>
+                    <p>Технологии: JavaScript / Bootstrap / HTML / CSS</p>
+                </div>
+
+                <div class="modal-work__footer">
+                    <button class="modal-work__btn slickPrev" type="button">
+                        <img src="images/back.svg" height="11" alt="">
+                    </button>
+                    <button class="modal-work__btn slickNext" type="button">
+                        <img src="images/next.svg" height="11" alt="">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Modal-1/2-->
+<div class="modal" id="modal_project_2">
+    <div class="modal__dialog">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="images/1200px-High-contrast-dialog-close.svg.png" alt="Close">
+        </button>
+
+        <div class="modal-work">
+            <div class="modal-work__preview">
+                <div data-slider="slick">
+                    <div>
+                        <img class="modal-work__photo" src="images/4.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="modal-work__photo" src="images/123.png" alt="">
+                    </div>
+                    </div>
+
+            </div>
+            <div class="modal-work__content">
+
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">Расчет стоимости автомобиля в лизинг</h3>
+                    <div class="modal-work__info">
+                        Web-сайт <span class="modal-work__info-divider">|</span> 2021
+                    </div>
+                </div>
+
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Свой собственный проект </div>
+                                        <div class="modal-work__client-company"></div>
+                </div>
+
+                <div class="modal-work__text">
+                    <p>Проект создан для расчета стоимости автомобиля в лизинг. При расчете конечной стоимости
+                        автомобиля используется разная ставка для каждого банка.
+                        С помощью ползунка вы можете выбрать стоимость автомобиля, срок лизинга и первоначальный взнос.
+                        Калькулятор способен рассчитать и точно вывести сумму кредита, ежемесячный платеж,
+                        рекомендуемый доход и сумма договора лизинга </p>
+                    <p>Технологии: JavaScript / HTML / CSS</p>
+                </div>
+
+                <div class="modal-work__footer">
+                    <button class="modal-work__btn slickPrev" type="button">
+                        <img src="images/back.svg" height="11" alt="">
+                    </button>
+                    <button class="modal-work__btn slickNext" type="button">
+                        <img src="images/next.svg" height="11" alt="">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Modal-1/3-->
+<div class="modal" id="modal_project_3">
+    <div class="modal__dialog">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="images/1200px-High-contrast-dialog-close.svg.png" alt="Close">
+        </button>
+
+        <div class="modal-work">
+            <div class="modal-work__preview">
+                <img class="modal-work__photo" src="images/loading-11.gif" alt="">
+            </div>
+            <div class="modal-work__content">
+
+                <div class="modal-work__header">
+                    <h3 class="modal-work__title">Проект находится в разработке...</h3>
+                </div>
+
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title"></div>
+                    <div class="modal-work__client-company"></div>
+                </div>
+
+                <div class="modal-work__text">
+                    <p></p>
+                    <p></p>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Modal-2-->
+<div class="modal" id="modal_resume">
+    <div class="modal__dialog">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="images/1200px-High-contrast-dialog-close.svg.png" alt="Close">
+        </button>
+
+        <div class="modal__content">
+            <h3 class="modal__title text-center">РЕЗЮМЕ</h3>
+
+            <div class="text-center">
+                <a class="btn btn--thin" href="https://hh.ru/resume/1d087f27ff08c6fa890039ed1f68666c754e66?print=true">
+                    СКАЧАТЬ PDF</a>
+                <a class="btn btn--thin" href="https://hh.ru/resume/1d087f27ff08c6fa890039ed1f68666c754e66?print=true">
+                    РАСПЕЧАТАТЬ</a>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline__col  timeline__col--left">
+                    <h4 class="timeline__title">ОПЫТ</h4>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="04-28-2021">2020 - <b>НАСТОЯЩЕЕ ВРЕМЯ</b></time>
+                        <h5 class="timeline__subtitle">Freelancer</h5>
+                        <div class="timeline__position">frontend developer</div>
+                        <div class="timeline__text">
+                            <p>Разработка сайтов с нуля и по макетам разной сложности.
+                                Применение адаптивной верстки, соединение элементов HTML, CSS, Bootstrap используя БЭМ.
+                                Максимально сохраняю пропорции в процентном соотношении как показано в макете.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="04-28-2021">2021 - <b>НАСТОЯЩЕЕ ВРЕМЯ</b></time>
+                        <h5 class="timeline__subtitle">Freelancer</h5>
+                        <div class="timeline__position">frontend developer</div>
+                        <div class="timeline__text">
+                            <p>
+                                Начало изучения JavaScript используя ECMAScript. Фреймворки JS : Vue.js, JQuery.
+                                Кодирование вполне возможно без их использования, но правильно подобранная
+                                среда может значительно облегчить работу. Использование система контроля версий Git,
+                                CSS пре-процессоры SASS, Less.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="11-21-2019">Что изучаю сейчас - <b> Запланировано</b></time>
+                        <h5 class="timeline__subtitle">В настоящий момент изучаю - Vue.js</h5>
+                        <div class="timeline__position">Запланировано:</div>
+                        <div class="timeline__text">
+                            <p>Первоначально JavaScript использовался только на стороне клиента. Теперь JavaScript еще
+                                используется в качестве языка программирования на стороне сервера. Поэтому,
+                                запланировано: React, Angular, Node.js</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__col  timeline__col--right">
+                    <h4 class="timeline__title">ОБРАЗОВАНИЕ</h4>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="04-28-2021">2014 - 2018</time>
+                        <h5 class="timeline__subtitle">Диплом с отличием - направление "Биохимия"</h5>
+                        <div class="timeline__position">Федеральное государственное автономное образовательное
+                            учреждение высшего образования «Крымский федеральный университет
+                            имени В. И. Вернадского», Симферополь</div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <time class="timeline__date" datetime="11-21-2019">2018-2020</time>
+                        <h5 class="timeline__subtitle">Диплом с отличием - направление "Экология" </h5>
+                        <div class="timeline__position">Федеральное государственное автономное образовательное
+                            учреждение высшего образования «Крымский федеральный университет
+                            имени В. И. Вернадского», Симферополь</div>
+                    </div>
+
+                    <h4 class="timeline__title">Навыки</h4>
+                                <div class="timeline__position">HTML, CSS, Bootstrap, less/Sass css</div>
+                               <div class="timeline__position">JavaScript, Vue js, jQuery, Ajax </div>
+                                <div class="timeline__position">Git, GitHub</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a class="btn " href="#" data-modal="#modal_hire_me">найми меня</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--Modal-3-->
+<div class="modal" id="modal_hire_me">
+    <div class="modal__dialog  modal__dialog--sm">
+
+        <button class="modal__close" type="button" data-close>
+            <img src="images/1200px-High-contrast-dialog-close.svg.png" alt="Close">
+        </button>
+
+        <div class="contact">
+            <div class="contact__left">
+                <h3 class="modal__title mb-0 text-center">ДАВАЙТЕ ПОГОВОРИМ!</h3>
+                <h4 class="modal__subtitle text-center">ПОЗВОНИТЕ МНЕ ИЛИ ОТПРАВЬТЕ ЗАПРОС</h4>
+
+                <ul class="contact__info">
+                    <li class="contact__info-item">
+                        <img class="contact__info-icon" src="images/304080.svg" alt="">
+                        +7 (978) 864-99-76
+                    </li>
+                    <li class="contact__info-item">
+                        <img class="contact__info-icon" src="images/634902.svg" alt="">
+                        rm2zvk@mail.ru
+                    </li>
+                </ul>
+
+                <form class="form" action="/" method="post">
+                    <div class="form__group">
+                        <label class="form__label" for="input-email">Адрес электронной почты</label>
+                        <input class="form__input" name="input-email" type="text" id="input-email"
+                               placeholder="Введите e-mail">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="input-text">Что вас интересует?</label>
+                        <textarea class="form__textarea" name="input-text" id="input-text"
+                                  placeholder="Введите текст сообщения..."></textarea>
+                    </div>
+
+                    <div class="text-right">
+                        <button class="btn" type="submit">ОТПРАВИТЬ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/slick.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
